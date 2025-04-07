@@ -1,0 +1,192 @@
+{
+  "city": "Izmit",
+  "taxi": {
+    "openingFee": 10.0,
+    "costPerKm": 4.0
+  },
+  "duraklar": [
+    {
+      "id": "bus_umuttepe",
+      "name": "Umuttepe",
+      "type": "bus",
+      "location": {
+        "lat": 40.8223,
+        "lon": 29.9193
+      },
+      "sonDurak": false,
+      "nextStops": [
+        {
+          "stopId": "bus_otogar",
+          "mesafe": 3.5,
+          "ucret": 7.5,
+          "sure": 15
+        }
+      ]
+    },
+    {
+      "id": "bus_otogar",
+      "name": "Otogar",
+      "type": "bus",
+      "location": {
+        "lat": 40.7776,
+        "lon": 29.9372
+      },
+      "sonDurak": false,
+      "nextStops": [
+        {
+          "stopId": "bus_sekapark",
+          "mesafe": 2.8,
+          "ucret": 7.5,
+          "sure": 12
+        }
+      ],
+      "transfer": {
+        "transferStopId": "tram_otogar",
+        "transferSure": 5,
+        "transferUcret": 3.75
+      }
+    },
+    {
+      "id": "tram_otogar",
+      "name": "Otogar",
+      "type": "tram",
+      "location": {
+        "lat": 40.7776,
+        "lon": 29.9372
+      },
+      "sonDurak": false,
+      "nextStops": [
+        {
+          "stopId": "tram_yahyakaptan",
+          "mesafe": 2.1,
+          "ucret": 7.5,
+          "sure": 8
+        }
+      ],
+      "transfer": {
+        "transferStopId": "bus_otogar",
+        "transferSure": 5,
+        "transferUcret": 3.75
+      }
+    },
+    {
+      "id": "bus_sekapark",
+      "name": "Sekapark",
+      "type": "bus",
+      "location": {
+        "lat": 40.7654,
+        "lon": 29.9408
+      },
+      "sonDurak": false,
+      "nextStops": [
+        {
+          "stopId": "bus_41burda",
+          "mesafe": 1.2,
+          "ucret": 7.5,
+          "sure": 6
+        },
+        {
+          "stopId": "bus_yahyakaptan",
+          "mesafe": 2.5,
+          "ucret": 7.5,
+          "sure": 10
+        },
+        {
+          "stopId": "bus_symbolavm",
+          "mesafe": 4.2,
+          "ucret": 7.5,
+          "sure": 18
+        }
+      ],
+      "transfer": {
+        "transferStopId": "tram_sekapark",
+        "transferSure": 5,
+        "transferUcret": 3.75
+      }
+    },
+    {
+      "id": "tram_sekapark",
+      "name": "Sekapark",
+      "type": "tram",
+      "location": {
+        "lat": 40.7654,
+        "lon": 29.9408
+      },
+      "sonDurak": false,
+      "nextStops": [
+        {
+          "stopId": "tram_ijalkevi",
+          "mesafe": 1.8,
+          "ucret": 7.5,
+          "sure": 7
+        },
+        {
+          "stopId": "tram_yahyakaptan",
+          "mesafe": 2.3,
+          "ucret": 7.5,
+          "sure": 9
+        }
+      ],
+      "transfer": {
+        "transferStopId": "bus_sekapark",
+        "transferSure": 5,
+        "transferUcret": 3.75
+      }
+    },
+    {
+      "id": "bus_41burda",
+      "name": "41 Burda",
+      "type": "bus",
+      "location": {
+        "lat": 40.7589,
+        "lon": 29.9467
+      },
+      "sonDurak": true,
+      "nextStops": []
+    },
+    {
+      "id": "tram_ijalkevi",
+      "name": "İzmit Halkevi",
+      "type": "tram",
+      "location": {
+        "lat": 40.7623,
+        "lon": 29.9289
+      },
+      "sonDurak": true,
+      "nextStops": []
+    },
+    {
+      "id": "bus_yahyakaptan",
+      "name": "Yahya Kaptan",
+      "type": "bus",
+      "location": {
+        "lat": 40.7512,
+        "lon": 29.9634
+      },
+      "sonDurak": true,
+      "nextStops": []
+    },
+    {
+      "id": "tram_yahyakaptan",
+      "name": "Yahya Kaptan",
+      "type": "tram",
+      "location": {
+        "lat": 40.7512,
+        "lon": 29.9634
+      },
+      "sonDurak": true,
+      "nextStops": []
+    },
+    {
+      "id": "bus_symbolavm",
+      "name": "Symbol AVM",
+      "type": "bus",
+      "location": {
+        "lat": 40.7423,
+        "lon": 29.9823
+      },
+      "sonDurak": true,
+      "nextStops": []
+    }
+  ]
+} 

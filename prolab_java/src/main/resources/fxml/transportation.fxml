@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <HBox spacing="10">
+        <VBox spacing="5">
+            <Label text="Başlangıç Noktası" />
+            <ComboBox fx:id="startStopComboBox" prefWidth="200" />
+            <HBox spacing="5">
+                <TextField fx:id="startLatField" promptText="Enlem" prefWidth="95" />
+                <TextField fx:id="startLonField" promptText="Boylam" prefWidth="95" />
+            </HBox>
+        </VBox>
+        
+        <VBox spacing="5">
+            <Label text="Varış Noktası" />
+            <ComboBox fx:id="endStopComboBox" prefWidth="200" />
+            <HBox spacing="5">
+                <TextField fx:id="endLatField" promptText="Enlem" prefWidth="95" />
+                <TextField fx:id="endLonField" promptText="Boylam" prefWidth="95" />
+            </HBox>
+        </VBox>
+        
+        <VBox spacing="5">
+            <Label text="Yolcu Tipi" />
+            <ComboBox fx:id="passengerTypeComboBox" prefWidth="150" />
+            
+            <Label text="Ödeme Yöntemi" />
+            <ComboBox fx:id="paymentMethodComboBox" prefWidth="150" />
+            
+            <Button text="Rota Hesapla" onAction="#calculateRoute" prefWidth="150" />
+        </VBox>
+    </HBox>
+    
+    <SplitPane dividerPositions="0.7" VBox.vgrow="ALWAYS">
+        <WebView fx:id="mapView" prefHeight="600" />
+        <TextArea fx:id="resultText" editable="false" wrapText="true" />
+    </SplitPane>
+</VBox> 
